@@ -1,0 +1,43 @@
+SCOPE
+Must Have:
+- Login/logout function
+- Sign in function
+- View menu
+- View shop contact information
+- View personal information
+- Change personal information
+- Place order
+- Make payment (use a sandbox PayPal account for this)
+- View previous orders (to include current order)
+- Membership ID (automatically generated upon signup)
+
+Should Have:
+- Be able to scan QR code (for in-store orders, mobile app)
+- Email receipts
+- Reorder a previous order (like UberEats)
+- Rewards program
+- Refer a friend
+- Delete account
+
+Could Have:
+- Coffee of the day (randomly recommended product)
+
+
+USER STORIES
+As a customer, I should:
+- be able to log in
+- be able to create an account and become a member
+- be able to scroll through menu items and see their prices
+- be able to easily add an item to my basket
+- be able to easily remove an item from my basket
+- be able to seamlessly pay for my order
+- be able to view my order details
+- be able to change my personal information
+- be able to view my previous orders
+
+As an admin, I should:
+- be able to view all registered users (customers)
+- be able to add, edit and remove menu items from the database (CRUD operations)
+- be able to view all orders placed
+- be able to sort orders by live (those currently in progress), ready (ready for collection) and closed (processed and having been collected by cx)
+- 
