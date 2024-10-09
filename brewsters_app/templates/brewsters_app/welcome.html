@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewsters | Welcome</title>
+    <link rel="stylesheet" href="{% static 'brewsters_app/css/styles.css' %}">  <!-- Link to CSS -->
+    <link rel="icon" href="https://i.postimg.cc/85Ghv6n5/brewsters-logo-terrible-i-know.png" type="image/x-icon">
+</head>
+<body id="welcome-body">
+    <section class="welcome-section">
+        <img src="https://i.postimg.cc/85Ghv6n5/brewsters-logo-terrible-i-know.png" alt="Brewsters logo" class="big-logo">
+        <div class="text-block">
+            <h1>Brewsters</h1>
+            <h4>Community for coffee</h4>
+        </div>
+    </section>
+    <section class="welcome-section">
+        <div class="welcome-btn-container">
+            <a href="{% url 'signup' %}">
+                <button>Join now!</button>
+            </a>
+            <a href="{% url 'login' %}">
+                <button>Sign in</button>
+            </a>
+        </div>
+    </section>
+
+    <script src="{% static 'brewsters_app/js/scripts.js' %}"></script>  <!-- Link to JavaScript -->
+</body>
+</html>

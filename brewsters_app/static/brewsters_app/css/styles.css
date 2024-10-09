@@ -1,0 +1,94 @@
+/*elements in welcome.html*/
+#welcome-body {
+    background-color: #EECE90;
+}
+
+.welcome-section {
+    margin-top : 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.text-block {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.text-block h1 {
+    font-size: 350%;
+    margin: 5px 5px 8px 10px;
+}
+
+.text-block h4 {
+    font-size: 200%;
+    margin: 5px 5px 8px 10px;
+}
+
+.welcome-btn-container {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-btn-container button {
+    width: 150px;
+    height: fit-content;
+    padding: 15px;
+    background-color: #EEBB06;
+    border: none;
+    font-size: larger;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.welcome-btn-container button:hover {
+    background-color: #A78F38;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .big-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text-block h1 {
+        font-size: 190%;
+        margin: 5px 5px 8px 10px;
+    }
+    
+    .text-block h4 {
+        font-size: 110%;
+        margin: 5px 5px 8px 10px;
+    }
+
+    .welcome-btn-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 3vh;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .welcome-btn-container button {
+        padding: 10px;
+        font-size:medium;
+        font-weight: 600;
+    }
+}
