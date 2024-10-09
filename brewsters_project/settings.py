@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'brewsters_app',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# added for redirection after specified actions
+LOGIN_REDIRECT_URL = 'home'  # Redirect after login
+LOGOUT_REDIRECT_URL = 'welcome'  # Redirect after logout
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
