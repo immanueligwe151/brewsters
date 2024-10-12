@@ -1,8 +1,20 @@
+/* general styles, to be applied across the board unless specified otherwise */
 body {
     background-color: #EECE90;
 }
 
-/*elements in welcome.html*/
+button { /* to apply to all buttons unless specified otherwise */
+    cursor: pointer;
+    background-color: #EEBB06;
+    border: none;
+}
+
+button:hover { /* to apply to all buttons unless specified otherwise */
+    background-color: #A78F38;
+}
+
+
+/* elements in welcome.html */
 .welcome-section {
     margin-top : 50px;
     display: flex;
@@ -48,17 +60,53 @@ body {
     width: 150px;
     height: fit-content;
     padding: 15px;
-    background-color: #EEBB06;
-    border: none;
     font-size: larger;
     font-weight: 800;
-    cursor: pointer;
 }
 
-.welcome-btn-container button:hover {
-    background-color: #A78F38;
+
+
+/* styles for signup.html and login.html (same format used hence used html classes) */
+.auth-div {
+    margin-top: 40px;
+    text-align: center;
 }
 
+.auth-div h2 {
+    font-size: x-large;
+}
+
+.auth-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+    width: fit-content;
+}
+
+.form-group label {
+    font-size: large;
+    font-weight: 800;
+}
+
+.form-group input {
+    width: 30vw;
+    font-size: medium;
+}
+
+.submit-btn {
+    width: 150px;
+    height: fit-content;
+    padding: 10px;
+    background-color: #EEBB06;
+    font-size: medium;
+    font-weight: 600;
+}
 
 
 
@@ -148,6 +196,9 @@ body {
 }
 
 
+
+
+/* to aid responsive design on smaller devices */
 @media (max-width: 768px) {
     .big-logo {
         width: 80px;
@@ -177,4 +228,32 @@ body {
         font-size:medium;
         font-weight: 600;
     }
+
+
+
+    
+    .auth-div h2 {
+        font-size: medium;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group label {
+        font-size: small;
+        font-weight: 600;
+    }
+    
+    .form-group input {
+        width: 50vw;
+        font-size: smaller;
+    }
+    
+    .submit-btn {
+        width: 120px;
+        padding: 10px;
+        font-size: small;
+        font-weight: 600;
+    }    
 }
