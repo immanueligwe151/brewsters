@@ -108,6 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 LOGIN_REDIRECT_URL = 'home'  # Redirect after login
 LOGOUT_REDIRECT_URL = 'welcome'  # Redirect after logout
 
+AUTHENTICATION_BACKENDS = ['brewsters_app.backends.EmailBackend', 'django.contrib.auth.backends.ModelBackend']
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
