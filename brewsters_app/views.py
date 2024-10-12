@@ -53,6 +53,8 @@ def logout_view(request):
     return redirect('welcome')  # Redirect to welcome page after logging out
 
 # Home view
-@login_required  # Ensure the user is logged in to access this view
+#@login_required  # Ensure the user is logged in to access this view
 def home_view(request):
+    if not request.user.is_authenticated:
+        return redirect('welcome')  # Redirect to home if the user is logged in
     return render(request, 'brewsters_app/home.html')
