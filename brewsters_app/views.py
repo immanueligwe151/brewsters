@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, EmailLoginForm
+from .models import Category
 
 # Welcome view
 def welcome(request):
@@ -57,4 +58,5 @@ def logout_view(request):
 def home_view(request):
     if not request.user.is_authenticated:
         return redirect('welcome')  # Redirect to home if the user is logged in
-    return render(request, 'brewsters_app/home.html')
+    categories = Category.objects.all()  # Query to get all items from the database
+    return render(request, 'brewsters_app/home.html', {'categories': categories})

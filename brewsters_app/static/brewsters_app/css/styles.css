@@ -112,6 +112,12 @@ button:hover { /* to apply to all buttons unless specified otherwise */
 
 
 /*styles for collapsible menu*/
+.collapsible-body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
 .sidebar {
     background-color: #EEBB06;
     color: black;
@@ -171,7 +177,7 @@ button:hover { /* to apply to all buttons unless specified otherwise */
 }
 
 .sidebar.collapsed {
-    width: 50px; /* Width for peeking */
+    width: 50px; /* Width for sidebar peeking */
 }
 
 .sidebar.collapsed ul {
@@ -187,7 +193,7 @@ button:hover { /* to apply to all buttons unless specified otherwise */
     height: auto;
 }
 
-.central-block { /*to be used for all divs that require centralizing*/
+.central-block { /*to be used for all divs that require items being centralized*/
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -195,6 +201,38 @@ button:hover { /* to apply to all buttons unless specified otherwise */
     align-items: center;
 }
 
+/* all styles for displaying menu */
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    text-align: center;
+    flex-flow: row wrap;
+    width: 70%;
+    padding: 5px 30px 10px 30px;
+}
+
+.menu-item-div {
+    width: 200px;
+    height:200px;
+    padding: 10px 5px 5px 5px;
+    cursor: pointer;
+}
+
+.menu-item-div img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 0px;
+}
+
+.menu-item-div p {
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+    padding: 0px 10px 5px 10px;
+    margin-top: 0px;
+}
 
 
 
@@ -255,5 +293,33 @@ button:hover { /* to apply to all buttons unless specified otherwise */
         padding: 10px;
         font-size: small;
         font-weight: 600;
-    }    
+    }  
+    
+    
+
+
+    .items-list {   
+        /*background-color: #fff;*/
+        width: 70%;
+        gap: 40px;
+        padding: 5px 30px 10px 30px;
+    }
+
+    .menu-item-div {
+        /*background-color: blue;*/
+        width: 130px;
+        height:130px;
+    }
+    
+    .menu-item-div img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .menu-item-div p {
+        font-weight: 800;
+        font-size: 20px;
+        padding: 0px 10px 5px 10px;
+        margin-top: 0px;
+    }
 }

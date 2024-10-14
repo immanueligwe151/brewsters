@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brewsters | Join now!</title>
+    <title>Brewsters</title>
     <link rel="stylesheet" href="{% static 'brewsters_app/css/styles.css' %}">  <!-- Link to CSS -->
     <link rel="icon" href="https://i.postimg.cc/85Ghv6n5/brewsters-logo-terrible-i-know.png" type="image/x-icon">
 </head>
-<body>
-    <div class="sidebar" id="sidebar">
+<body class="collapsible-body">
+    <section class="sidebar" id="sidebar">
         <button class="toggle-btn" id="toggle-btn">☰</button>
         <ul>
             <li><a href="#" class="selected-page">Menu</a></li>
@@ -22,20 +22,29 @@
                 </form>
             </li>
         </ul>
-    </div>
-    <div class="content central-block" id="content">
-        <section class="welcome-section">
+    </section>
+    <section class="content central-block" id="content">
+        <div class="welcome-section">
             <img src="https://i.postimg.cc/85Ghv6n5/brewsters-logo-terrible-i-know.png" alt="Brewsters logo" class="big-logo">
             <div class="text-block">
                 <h1>Brewsters</h1>
                 <h4>Community for coffee</h4>
             </div>
-        </section>
-        <section class="">
-            <div class="">
-                <h1>Yo it's the home</h1>
+        </div>
+        
+        <h1>Menu</h1>
+        
+        <div class="items-list" id="main-menu-div">
+            {% for category in categories %}
+            <div class="menu-item-div">
+                <img src={{category.categoryImage}} alt="image for {{ category.categoryName }}">
+                <p>{{ category.categoryName }}</p>
             </div>
-        </section>
+            {% empty %}
+            <p>No items found.</p>
+            {% endfor %}
+            
+        </div>
 
         <div id="dialog" class="dialog">
             <div class="dialog-content" id="dialog-content">
@@ -44,7 +53,7 @@
                 
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="{% static 'brewsters_app/js/script.js' %}"></script>  <!-- Link to JavaScript -->
 </body>
